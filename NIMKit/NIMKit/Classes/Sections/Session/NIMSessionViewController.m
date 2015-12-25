@@ -236,6 +236,20 @@ NIMUserManagerDelegate>
 - (void)sendMessage:(NIMMessage *)message
 {
     [[[NIMSDK sharedSDK] chatManager] sendMessage:message toSession:_session error:nil];
+    [self ASupdateCell:message];
+}
+
+
+- (void)ASupdateCell:(NIMMessage *)message {
+    if ([self findModel:message]) {
+        [self uiUpdateMessage:message];
+    }else{
+        [self uiAddMessages:@[message]];
+    }
+    
+    NIMMessageModel *model = [self makeModel:message];
+    NSInteger index = [self.sessionDatasource indexAtModelArray:model];
+    [self.layoutManager updateCellAtIndex:index model:model];
 }
 
 //发送消息
@@ -247,7 +261,6 @@ NIMUserManagerDelegate>
         }else{
             [self uiAddMessages:@[message]];
         }
-
     }
 }
 

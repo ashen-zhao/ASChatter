@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ASDataProvider.h"
+#import "NIMKit.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[NIMSDK sharedSDK] registerWithAppID:@"acb5066b4fd7254e9256d4b18f10e408" cerName:nil];
+    [[NIMKit sharedKit] setProvider:[ASDataProvider new]];
     return YES;
 }
 

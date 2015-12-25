@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8C044DDEB88015367A912239 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B8BFDD2D3522D7B4C4F7F8 /* libPods.a */; };
+		8CE18D881C2CDC760007CF8D /* SessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE18D871C2CDC760007CF8D /* SessionController.m */; };
+		8CE18D8B1C2CDD500007CF8D /* ASDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE18D8A1C2CDD500007CF8D /* ASDataProvider.m */; };
+		8CE18D8F1C2CE0ED0007CF8D /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE18D8E1C2CE0ED0007CF8D /* LoginController.m */; };
 		8CEEA1D11C2BF95400AD2922 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1D01C2BF95400AD2922 /* main.m */; };
 		8CEEA1D41C2BF95400AD2922 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1D31C2BF95400AD2922 /* AppDelegate.m */; };
-		8CEEA1D71C2BF95400AD2922 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1D61C2BF95400AD2922 /* ViewController.m */; };
 		8CEEA1DA1C2BF95400AD2922 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CEEA1D81C2BF95400AD2922 /* Main.storyboard */; };
 		8CEEA1DC1C2BF95400AD2922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CEEA1DB1C2BF95400AD2922 /* Assets.xcassets */; };
 		8CEEA1DF1C2BF95400AD2922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CEEA1DD1C2BF95400AD2922 /* LaunchScreen.storyboard */; };
@@ -41,12 +43,16 @@
 		34761245AEAF2FE574EC0B28 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		65B8BFDD2D3522D7B4C4F7F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		763777230F4DCE5CDC02338B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8CE18D861C2CDC760007CF8D /* SessionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionController.h; sourceTree = "<group>"; };
+		8CE18D871C2CDC760007CF8D /* SessionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionController.m; sourceTree = "<group>"; };
+		8CE18D891C2CDD500007CF8D /* ASDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASDataProvider.h; sourceTree = "<group>"; };
+		8CE18D8A1C2CDD500007CF8D /* ASDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASDataProvider.m; sourceTree = "<group>"; };
+		8CE18D8D1C2CE0ED0007CF8D /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		8CE18D8E1C2CE0ED0007CF8D /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		8CEEA1CC1C2BF95400AD2922 /* ASChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CEEA1D01C2BF95400AD2922 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8CEEA1D21C2BF95400AD2922 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8CEEA1D31C2BF95400AD2922 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8CEEA1D51C2BF95400AD2922 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8CEEA1D61C2BF95400AD2922 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8CEEA1D91C2BF95400AD2922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CEEA1DB1C2BF95400AD2922 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CEEA1DE1C2BF95400AD2922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,12 +134,15 @@
 				8CEEA22E1C2BFC7C00AD2922 /* NIMKitResouce.bundle */,
 				8CEEA1D21C2BF95400AD2922 /* AppDelegate.h */,
 				8CEEA1D31C2BF95400AD2922 /* AppDelegate.m */,
-				8CEEA1D51C2BF95400AD2922 /* ViewController.h */,
-				8CEEA1D61C2BF95400AD2922 /* ViewController.m */,
+				8CE18D891C2CDD500007CF8D /* ASDataProvider.h */,
+				8CE18D8A1C2CDD500007CF8D /* ASDataProvider.m */,
+				8CE18D8D1C2CE0ED0007CF8D /* LoginController.h */,
+				8CE18D8E1C2CE0ED0007CF8D /* LoginController.m */,
+				8CE18D861C2CDC760007CF8D /* SessionController.h */,
+				8CE18D871C2CDC760007CF8D /* SessionController.m */,
 				8CEEA1D81C2BF95400AD2922 /* Main.storyboard */,
 				8CEEA1DB1C2BF95400AD2922 /* Assets.xcassets */,
 				8CEEA1DD1C2BF95400AD2922 /* LaunchScreen.storyboard */,
-				8CEEA1E01C2BF95400AD2922 /* Info.plist */,
 				8CEEA1CF1C2BF95400AD2922 /* Supporting Files */,
 			);
 			path = ASChatter;
@@ -142,6 +151,7 @@
 		8CEEA1CF1C2BF95400AD2922 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8CEEA1E01C2BF95400AD2922 /* Info.plist */,
 				8CEEA1D01C2BF95400AD2922 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -302,8 +312,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CEEA1D71C2BF95400AD2922 /* ViewController.m in Sources */,
+				8CE18D8F1C2CE0ED0007CF8D /* LoginController.m in Sources */,
+				8CE18D8B1C2CDD500007CF8D /* ASDataProvider.m in Sources */,
 				8CEEA1D41C2BF95400AD2922 /* AppDelegate.m in Sources */,
+				8CE18D881C2CDC760007CF8D /* SessionController.m in Sources */,
 				8CEEA1D11C2BF95400AD2922 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -114,4 +114,6 @@
  */
 - (void)uiUpdateMessage:(NIMMessage *)message;
 
+- (void)ASupdateCell:(NIMMessage *)message;
+
 @end
