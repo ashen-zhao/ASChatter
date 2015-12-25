@@ -11,6 +11,8 @@
 		8CE18D881C2CDC760007CF8D /* SessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE18D871C2CDC760007CF8D /* SessionController.m */; };
 		8CE18D8B1C2CDD500007CF8D /* ASDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE18D8A1C2CDD500007CF8D /* ASDataProvider.m */; };
 		8CE18D8F1C2CE0ED0007CF8D /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE18D8E1C2CE0ED0007CF8D /* LoginController.m */; };
+		8CE18DAF1C2D112C0007CF8D /* chatting.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE18DAD1C2D112C0007CF8D /* chatting.png */; };
+		8CE18DB01C2D112C0007CF8D /* keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE18DAE1C2D112C0007CF8D /* keyboard.png */; };
 		8CEEA1D11C2BF95400AD2922 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1D01C2BF95400AD2922 /* main.m */; };
 		8CEEA1D41C2BF95400AD2922 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1D31C2BF95400AD2922 /* AppDelegate.m */; };
 		8CEEA1DA1C2BF95400AD2922 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CEEA1D81C2BF95400AD2922 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		8CE18D8A1C2CDD500007CF8D /* ASDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASDataProvider.m; sourceTree = "<group>"; };
 		8CE18D8D1C2CE0ED0007CF8D /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		8CE18D8E1C2CE0ED0007CF8D /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		8CE18DAD1C2D112C0007CF8D /* chatting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatting.png; sourceTree = "<group>"; };
+		8CE18DAE1C2D112C0007CF8D /* keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard.png; sourceTree = "<group>"; };
 		8CEEA1CC1C2BF95400AD2922 /* ASChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CEEA1D01C2BF95400AD2922 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8CEEA1D21C2BF95400AD2922 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8CE18DAC1C2D110E0007CF8D /* screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				8CE18DAD1C2D112C0007CF8D /* chatting.png */,
+				8CE18DAE1C2D112C0007CF8D /* keyboard.png */,
+			);
+			name = screenshot;
+			sourceTree = "<group>";
+		};
 		8CEEA1C31C2BF95400AD2922 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +144,7 @@
 		8CEEA1CE1C2BF95400AD2922 /* ASChatter */ = {
 			isa = PBXGroup;
 			children = (
+				8CE18DAC1C2D110E0007CF8D /* screenshot */,
 				8CEEA22E1C2BFC7C00AD2922 /* NIMKitResouce.bundle */,
 				8CEEA1D21C2BF95400AD2922 /* AppDelegate.h */,
 				8CEEA1D31C2BF95400AD2922 /* AppDelegate.m */,
@@ -251,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CEEA1DF1C2BF95400AD2922 /* LaunchScreen.storyboard in Resources */,
+				8CE18DAF1C2D112C0007CF8D /* chatting.png in Resources */,
+				8CE18DB01C2D112C0007CF8D /* keyboard.png in Resources */,
 				8CEEA1DC1C2BF95400AD2922 /* Assets.xcassets in Resources */,
 				8CEEA22F1C2BFC7C00AD2922 /* NIMKitResouce.bundle in Resources */,
 				8CEEA1DA1C2BF95400AD2922 /* Main.storyboard in Resources */,
