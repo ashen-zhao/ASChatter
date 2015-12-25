@@ -57,7 +57,7 @@
     [super refresh:data];
     NIMAudioObject *object = self.model.message.messageObject;
     _durationLabel.text = [NSString stringWithFormat:@"%zd\"",object.duration/1000];
-    if (!self.model.message.isOutgoingMsg) {
+    if (![self.model.message.from isEqualToString:@"me"]) {
         _durationLabel.textColor = [UIColor blackColor];
     }else{
         _durationLabel.textColor = [UIColor whiteColor];
@@ -69,7 +69,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     UIEdgeInsets contentInsets = self.model.contentViewInsets;
-    if (self.model.message.isOutgoingMsg) {
+    if ([self.model.message.from isEqualToString:@"me"]) {
         self.voiceImageView.nim_right = self.nim_width - contentInsets.right;
         _durationLabel.nim_left = contentInsets.left;
     } else

@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Login-->
+        <!--聊天-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginController" sceneMemberID="viewController">
@@ -16,9 +16,29 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Jzj-GD-yFE">
+                                <rect key="frame" x="20" y="164" width="560" height="35"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.76862745099999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="N2R-S8-dS2"/>
+                                </constraints>
+                                <state key="normal" title="就是要聊天">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="justChatting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucb-Mm-e26"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jzj-GD-yFE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="6c5-MX-6iC"/>
+                            <constraint firstItem="Jzj-GD-yFE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="9rl-hh-Pkc"/>
+                            <constraint firstAttribute="trailing" secondItem="Jzj-GD-yFE" secondAttribute="trailing" constant="20" id="coM-2Q-H3t"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="g4y-Ec-kiH"/>
+                    <navigationItem key="navigationItem" title="聊天" id="g4y-Ec-kiH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

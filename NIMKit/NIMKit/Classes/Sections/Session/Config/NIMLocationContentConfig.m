@@ -21,6 +21,6 @@
 
 - (UIEdgeInsets)contentViewInsets
 {
-    return self.message.isOutgoingMsg ? UIEdgeInsetsMake(3,3,3,8) : UIEdgeInsetsMake(3,8,3,3);
+    return [self.message.from isEqualToString:@"me"] ? UIEdgeInsetsMake(3,3,3,8) : UIEdgeInsetsMake(3,8,3,3);
 }
 @end

@@ -41,7 +41,7 @@
     NIMImageObject * imageObject = (NIMImageObject*)self.model.message.messageObject;
     UIImage * image              = [UIImage imageWithContentsOfFile:imageObject.thumbPath];
     self.imageView.image         = image;
-    self.progressView.hidden     = self.model.message.isOutgoingMsg ? (self.model.message.deliveryState != NIMMessageDeliveryStateDelivering) : (self.model.message.attachmentDownloadState != NIMMessageAttachmentDownloadStateDownloading);
+    self.progressView.hidden     = [self.model.message.from isEqualToString:@"me"] ? (self.model.message.deliveryState != NIMMessageDeliveryStateDelivering) : (self.model.message.attachmentDownloadState != NIMMessageAttachmentDownloadStateDownloading);
     if (!self.progressView.hidden) {
         [self.progressView setProgress:[[[NIMSDK sharedSDK] chatManager] messageTransportProgress:self.model.message]];
     }

@@ -36,7 +36,7 @@ NSString *const NIMTextMessageLabelLinkData = @"NIMTextMessageLabelLinkData";
     [super refresh:data];
     NSString *text = self.model.message.text;
     [_textLabel nim_setText:text];
-    if (!self.model.message.isOutgoingMsg) {
+    if (![self.model.message.from isEqualToString:@"me"]) {
         self.textLabel.textColor = [UIColor blackColor];
     }else{
         self.textLabel.textColor = [UIColor whiteColor];

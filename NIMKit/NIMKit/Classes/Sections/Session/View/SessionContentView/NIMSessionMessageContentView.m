@@ -73,7 +73,7 @@
 #pragma mark - Private
 - (UIImage *)chatBubbleImageForState:(UIControlState)state{
     
-    if (self.model.message.isOutgoingMsg) {
+    if ([self.model.message.from isEqualToString:@"me"]) {
         if (state == UIControlStateNormal)
         {
             UIImage *image = [UIImage nim_imageInKit:@"icon_sender_text_node_normal.png"];

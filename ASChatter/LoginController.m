@@ -16,28 +16,18 @@
 @end
 
 @implementation LoginController
+- (IBAction)justChatting:(id)sender {
+    NIMSession *session = [NIMSession session:@"与库克的聊天" type:NIMSessionTypeP2P];
+    SessionController *sc = [[SessionController alloc] initWithSession:session];
+    [self.navigationController pushViewController:sc animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NIMSession *session = [NIMSession session:@"as001" type:NIMSessionTypeP2P];
-    SessionController *sc = [[SessionController alloc] initWithSession:session];
-    [self.navigationController pushViewController:sc animated:YES];
-    
-    [[NIMSDK sharedSDK].loginManager autoLogin:@"www" token:@"123456"];
+   
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

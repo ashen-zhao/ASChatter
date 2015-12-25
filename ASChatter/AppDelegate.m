@@ -18,7 +18,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[NIMSDK sharedSDK] registerWithAppID:@"acb5066b4fd7254e9256d4b18f10e408" cerName:nil];
     [[NIMKit sharedKit] setProvider:[ASDataProvider new]];
     return YES;
 }

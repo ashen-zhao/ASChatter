@@ -30,7 +30,7 @@
     [super refresh:data];
     NSString *text = [NIMKitUtil formatedMessage:data.message];
     [_textLabel nim_setText:text];
-    if (!self.model.message.isOutgoingMsg) {
+    if (![self.model.message.from isEqualToString:@"me"]) {
         _textLabel.textColor = [UIColor blackColor];
     }else{
         _textLabel.textColor = [UIColor whiteColor];

@@ -49,6 +49,7 @@ NIMUserManagerDelegate>
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         _session = session;
+     
     }
     return self;
 }

@@ -158,7 +158,7 @@ typedef NS_ENUM(NSInteger, NIMMessageAttachmentDownloadState){
  *  是否是往外发的消息
  *  @discussion 由于能对自己发消息，所以并不是所有来源是自己的消息都是往外发的消息，这个字段用于判断头像排版位置（是左还是右）。
  */
-@property (nonatomic,assign,readonly)       BOOL isOutgoingMsg;
+@property (nonatomic,assign)       BOOL isOutgoingMsg;
 
 /**
  *  消息是否被播放过

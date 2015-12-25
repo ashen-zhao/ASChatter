@@ -198,7 +198,7 @@
 - (void)layoutBubbleView
 {
     UIEdgeInsets contentInsets = self.model.bubbleViewInsets;
-    if (self.model.message.isOutgoingMsg) {
+    if ([self.model.message.from isEqualToString:@"me"]) {
         CGFloat protraitRightToBubble = 5.f;
         CGFloat right = self.model.shouldShowAvatar? CGRectGetMinX(self.headImageView.frame)  - protraitRightToBubble : self.nim_width;
         contentInsets.left = right - CGRectGetWidth(self.bubbleView.bounds);
@@ -211,7 +211,7 @@
 {
     if (_traningActivityIndicator.isAnimating) {
         CGFloat centerX = 0;
-        if (self.model.message.isOutgoingMsg) {
+        if ([self.model.message.from isEqualToString:@"me"]) {
             centerX = CGRectGetMinX(_bubbleView.frame) - [self retryButtonBubblePadding] - CGRectGetWidth(_traningActivityIndicator.bounds)/2;;
         } else
         {
@@ -226,7 +226,7 @@
 {
     if (!_retryButton.isHidden) {
         CGFloat centerX = 0;
-        if (!self.model.message.isOutgoingMsg) {
+        if (![self.model.message.from isEqualToString:@"me"]) {
             centerX = CGRectGetMaxX(_bubbleView.frame) + [self retryButtonBubblePadding] +CGRectGetWidth(_retryButton.bounds)/2;
         } else
         {
@@ -240,7 +240,7 @@
 - (void)layoutAudioPlayedIcon{
     if (!_audioPlayedIcon.hidden) {
         CGFloat padding = [self audioPlayedIconBubblePadding];
-        if (!self.model.message.isOutgoingMsg) {
+        if (![self.model.message.from isEqualToString:@"me"]) {
             _audioPlayedIcon.nim_left = _bubbleView.nim_right + padding;
         } else
         {
@@ -297,7 +297,7 @@
     CGFloat cellPaddingToProtrait = 8.f;
     CGFloat protraitImageWidth    = 42;//头像宽
     CGFloat selfProtraitOriginX   = (cellWidth - cellPaddingToProtrait - protraitImageWidth);
-    return self.model.message.isOutgoingMsg ? CGRectMake(selfProtraitOriginX, 0,
+    return [self.model.message.from isEqualToString:@"me"] ? CGRectMake(selfProtraitOriginX, 0,
                                                                        protraitImageWidth,
                                                                        protraitImageWidth) : CGRectMake(cellPaddingToProtrait, 0,                      protraitImageWidth, protraitImageWidth);
 }
@@ -324,7 +324,7 @@
 }
 
 - (CGFloat)retryButtonBubblePadding {
-    BOOL isFromMe = self.model.message.isOutgoingMsg;
+    BOOL isFromMe = [self.model.message.from isEqualToString:@"me"];
     if (self.model.message.messageType == NIMMessageTypeAudio) {
         return isFromMe ? 15 : 13;
     }
@@ -348,7 +348,7 @@
         if ([self.model.sessionConfig respondsToSelector:@selector(disableAudioPlayedStatusIcon)]) {
             hideIcon = [self.model.sessionConfig disableAudioPlayedStatusIcon];
         }
-        return (hideIcon || self.model.message.isOutgoingMsg || [self.model.message isPlayed]);
+        return (hideIcon || [self.model.message.from isEqualToString:@"me"] || [self.model.message isPlayed]);
     }
     return YES;
 }

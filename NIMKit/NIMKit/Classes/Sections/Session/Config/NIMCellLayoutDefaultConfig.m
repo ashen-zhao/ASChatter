@@ -72,7 +72,7 @@
             return NO;
         }
     }
-    return (!message.isOutgoingMsg && message.session.sessionType == NIMSessionTypeTeam);
+    return (![message.from isEqualToString:@"me"] && message.session.sessionType == NIMSessionTypeTeam);
 }
 
 

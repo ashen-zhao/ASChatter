@@ -31,7 +31,7 @@
 
 - (UIEdgeInsets)contentViewInsets
 {
-    return self.message.isOutgoingMsg ?
+    return [self.message.from isEqualToString:@"me"] ?
     UIEdgeInsetsMake(11.f,11.f,9.f,15.f) : UIEdgeInsetsMake(11.f, 15.f, 9.f, 9.f);
 }
 

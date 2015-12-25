@@ -16,17 +16,17 @@
 
 @implementation SessionController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)sendMessage:(NIMMessage *)message {
-    message.session.sessionId = @"www";
+    message.from = @"me";
     [self ASupdateCell:message];
     
     NSDictionary *dict = @{@"key":@"c9e30338a173b079ec502423bc93347b", @"info":message.text};
@@ -34,6 +34,7 @@
     
     [manager GET:@"http://www.tuling123.com/openapi/api" parameters:dict success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         NIMMessage *message = [[NIMMessage alloc] init];
+        message.from = @"nome";
         message.text  = responseObject[@"text"];
         [self ASupdateCell:message];
 
@@ -41,15 +42,5 @@
         
     }];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -36,7 +36,7 @@
     NSString *text = @"未知类型消息";
     [self.label setText:text];
     [self.label sizeToFit];
-    if (!self.model.message.isOutgoingMsg) {
+    if (![self.model.message.from isEqualToString:@"me"]) {
         self.label.textColor = [UIColor blackColor];
     }else{
         self.label.textColor = [UIColor whiteColor];

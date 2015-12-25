@@ -65,7 +65,6 @@
 {
     if (index > -1) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-
         NIMMessageCell *cell = (NIMMessageCell *)[_tableView cellForRowAtIndexPath:indexPath];
         [cell refreshData:model];
     }
