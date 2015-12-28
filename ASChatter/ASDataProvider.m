@@ -14,7 +14,6 @@
 
     if ([userId isEqualToString:@"me"]) {
         NIMUser *user = [[NIMSDK sharedSDK].userManager userInfo:userId];
-        //如果本地有数据则直接返回
         NIMKitInfo *info = [[NIMKitInfo alloc] init];
         info.infoId      = userId;
         info.showName    = user.userInfo.nickName.length ? user.userInfo.nickName : userId;
